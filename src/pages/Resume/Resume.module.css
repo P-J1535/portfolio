@@ -1,0 +1,29 @@
+/* Resume.module.css */
+
+.resumePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.pdfContainer {
+  width: 80%;
+  height: 80vh; /* Adjust the height as needed */
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.pdfIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

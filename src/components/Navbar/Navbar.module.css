@@ -1,0 +1,114 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+ 
+    padding: 2px 5rem;
+    background-color: rgb(11, 17, 32);
+    box-shadow:
+        rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+        rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+        #3c475c 0px 1px 10px 0px;
+    position: relative; /* Added for mobile responsiveness */
+}
+
+.navbarLogo {
+    font-size: 2.5rem;
+    color: #ff014f;
+}
+
+.navbarMenu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarMenu li {
+    margin-right: 1rem;
+}
+
+.navbarMenu > li > a:hover {
+    color: #ff014f;
+}
+
+.navbarMenu > li > a:active {
+    color: red;
+}
+
+.navbarMenu a {
+    color: #6f777e;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbarMenu a.active {
+    color: red; /* Active link color */
+}
+
+.navbarToggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out; /* Added transition for smooth animation */
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ff014f;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg); /* Adjusted for the hamburger icon animation */
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* Fades out the middle line when menu is active */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Adjusted for the hamburger icon animation */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 40px;
+    }
+    .navbarMenu {
+      
+        display: none;
+        flex-direction: column;
+        background-color: #ffff;
+        position: absolute;
+        box-shadow:
+            rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+            rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+            rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+        top: 70px;
+        left: 80%;
+        width: 100%;
+        z-index: 10;
+        justify-content: flex-end;
+        padding: 0px;
+    }
+
+    .navbarMenu.active {
+        display: flex;
+        
+    }
+
+    .navbarToggle {
+        display: block;
+    }
+}
