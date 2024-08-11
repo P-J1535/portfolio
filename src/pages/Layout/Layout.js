@@ -1,24 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import styles from './Layout.module.css';
 
 const Layout = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 300) {
+        setShowScroll(true);
+      } else {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Smooth scrolling
+      behavior: 'smooth',
     });
   };
-
 
   return (
     <div>
       <Navbar />
-
-      <div className={styles.arrowContainer} onClick={scrollToTop}>
+      
+      <div 
+        className={`${styles.arrowContainer} ${showScroll ? styles.show : ''}`} 
+        onClick={scrollToTop}
+      >
         <ArrowUpwardIcon className={styles.icon} />
-        
       </div>
     </div>
   );

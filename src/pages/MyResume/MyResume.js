@@ -27,7 +27,7 @@ const Achievement = ({ title, institution, duration, description }) => (
 );
 
 const MyResume = () => {
-    const [activeTab, setActiveTab] = useState('Education');
+    const [activeTab, setActiveTab] = useState('Experience');
 
     const renderContent = () => {
         switch (activeTab) {
