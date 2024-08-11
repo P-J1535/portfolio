@@ -18,6 +18,7 @@ const HomePage = () => {
           <h5>Hello I'M</h5>
           <h1 className={styles.mainHeading}> Prathamesh Jepal</h1>
           <h3 className={styles.subHeading}>A Passionate Front-End Devloper</h3>
+          
         </div>
         <div className={styles.iconsContainer}>
           <div className={styles.socialIcons}>

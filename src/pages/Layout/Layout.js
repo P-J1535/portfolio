@@ -11,12 +11,14 @@ const Layout = () => {
     });
   };
 
+
   return (
     <div>
       <Navbar />
 
       <div className={styles.arrowContainer} onClick={scrollToTop}>
         <ArrowUpwardIcon className={styles.icon} />
+        hello
       </div>
     </div>
   );
