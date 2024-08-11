@@ -9,7 +9,10 @@ import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
 
-
+  const handleDownload = () => {
+    const resumeUrl = "/Resume/PrathameshJepal.pdf";
+    window.open(resumeUrl, '_blank')
+};
 
   return (
     <div className={styles.homePage}   id="home">
@@ -24,10 +27,10 @@ const HomePage = () => {
           <div className={styles.socialIcons}>
             <h2 className={styles.sectionTitle}>FIND ME ON</h2>
             <div className={styles.socialIconsWrapper}>
-              <FontAwesomeIcon icon={faFacebookF} className={styles.icon} />
-              <FontAwesomeIcon icon={faTwitter} className={styles.icon} />
-              <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
-              <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
+             <a href='https://www.facebook.com/prathamesh.jepal.1' target='_blank'> <FontAwesomeIcon icon={faFacebookF} className={styles.icon} /></a>
+              <a href='https://github.com/P-J1535' target='_blank'><FontAwesomeIcon icon={faGithub} className={styles.icon} /></a>
+             <a href='https://www.linkedin.com/in/prathamesh-jepal-014184230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' target='_blank'> <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} /></a>
+             <a href='https://www.instagram.com/pj_1535?igsh=MWNvNnI2emc2ZmEwNA%3D%3D&utm_source=qr' target='_blank'> <FontAwesomeIcon icon={faInstagram} className={styles.icon} /></a>
             </div>
           </div>
           <div className={styles.technologyIcons}>
@@ -35,13 +38,13 @@ const HomePage = () => {
             <div className={styles.socialIconsWrapper}>
               <FontAwesomeIcon icon={faReact} className={styles.icon} />
               <FontAwesomeIcon icon={faNodeJs} className={styles.icon} />
-              <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+              
               <FontAwesomeIcon icon={faHtml5} className={styles.icon} />
             </div>
           </div>
         </div>
         <div className={styles.btn}>
-        <Button variant='outlined' >Dounload Resume</Button>
+        <Button variant='outlined' onClick={handleDownload}>Dounload Resume</Button>
         </div>
       </div>
       <div className={styles.Profile}>

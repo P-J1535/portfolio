@@ -6,16 +6,15 @@ import Projects from './pages/Projects/Projects'
 import ContactUs from './pages/ContactUs/ContactUs'
 import MyResume from './pages/MyResume/MyResume'
 
-
 const App = () => {
   return (
-    <>
+    <div >
       <Layout />
       <HomePage />
       <MyResume />
       <Projects />
       <ContactUs />
-    </>
+    </div>
   );
 }
 

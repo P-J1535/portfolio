@@ -3,18 +3,17 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
- 
-    padding: 2px 5rem;
+    padding: 0 5rem;
     background-color: rgb(11, 17, 32);
     box-shadow:
         rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
         rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
         #3c475c 0px 1px 10px 0px;
-    position: fixed; /* Added for mobile responsiveness */
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    
+    transition: background-color 0.3s ease;
 }
 
 .navbarLogo {
@@ -27,6 +26,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
 }
 
 .navbarMenu li {
@@ -48,7 +48,7 @@
 }
 
 .navbarMenu a.active {
-    color: red; /* Active link color */
+    color: red; 
 }
 
 .navbarToggle {
@@ -62,7 +62,7 @@
     justify-content: space-between;
     width: 30px;
     height: 20px;
-    transition: transform 0.3s ease-in-out; /* Added transition for smooth animation */
+    transition: transform 0.3s ease-in-out;
 }
 
 .hamburger span {
@@ -70,46 +70,49 @@
     width: 100%;
     height: 2px;
     background-color: #ff014f;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
 }
 
 .hamburger.active span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg); /* Adjusted for the hamburger icon animation */
+    transform: translateY(6px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0; /* Fades out the middle line when menu is active */
+    opacity: 0; 
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg); /* Adjusted for the hamburger icon animation */
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 0 40px;
+        padding: 0 20px;
     }
+
     .navbarMenu {
-      
-        display: none;
+        display: flex;
         flex-direction: column;
+        gap: 10px;
         background-color: #ffff;
         position: absolute;
-        box-shadow:
-            rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
-            rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
-            rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
         top: 70px;
-        left: 80%;
-        width: 100%;
+        right: 0;
+        width: 50%;
+        height: 0;
+        overflow: hidden;
         z-index: 10;
-        justify-content: flex-end;
-        padding: 0px;
+        opacity: 0;
+        transform: translateY(-20px);
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 20px;
     }
 
     .navbarMenu.active {
-        display: flex;
-        
+        height: calc(40vh - 70px);
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .navbarToggle {

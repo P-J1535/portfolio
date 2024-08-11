@@ -11,14 +11,14 @@ const Navbar = () => {
 
   const handleLinkClick = (index) => {
     setActiveIndex(index);
-    setIsOpen(false); // Close the menu on link click (optional)
+    setIsOpen(false); 
   };
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarLogo}>{`< PJ >`}</div>
       <ul className={`${styles.navbarMenu} ${isOpen ? styles.active : ''}`}>
-        {['Home', 'About', 'Projects', 'Resume','Contact'].map((item, index) => (
+        {['Home', 'Projects', 'Resume','Contact'].map((item, index) => (
           <li key={index}>
             <a
               href={`#${item.toLowerCase()}`}

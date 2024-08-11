@@ -127,11 +127,13 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    width: 80%;
+    flex-direction: column;
 }
 
 .skill {
     width: 100%;
-    max-width: 300px;
+    /* max-width: 300px; */
 }
 
 .skillName {
