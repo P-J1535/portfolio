@@ -18,7 +18,7 @@ const Layout = () => {
 
       <div className={styles.arrowContainer} onClick={scrollToTop}>
         <ArrowUpwardIcon className={styles.icon} />
-        hello
+        
       </div>
     </div>
   );
