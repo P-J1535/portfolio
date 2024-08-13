@@ -48,8 +48,8 @@ const HomePage = () => {
         </div>
       </div>
       <div className={styles.Profile}>
-      <img src={pj1} alt="" className={styles.FirstImg} />
-      <img src={pj2} alt="" className={styles.SecondImg} />
+      <img src={pj2} alt="" className={styles.FirstImg} />
+      <img src={pj1} alt="" className={styles.SecondImg} />
       </div>
     </div>
   );
