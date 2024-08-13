@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './HomePage.module.css';
-import suraj1 from '../../assets/images/pjNew1.jpg';
-import suraj2 from '../../assets/images/pjNew2.png';
+import pj1 from '../../assets/images/pjNew1.jpg';
+import pj2 from '../../assets/images/pjNew2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faLinkedinIn, faInstagram, faReact, faNodeJs, faGithub, faHtml5 } from '@fortawesome/free-brands-svg-icons';
 import { Button } from '@mui/material';
@@ -48,8 +48,8 @@ const HomePage = () => {
         </div>
       </div>
       <div className={styles.Profile}>
-      <img src={suraj2} alt="" className={styles.FirstImg} />
-      <img src={suraj1} alt="" className={styles.SecondImg} />
+      <img src={pj1} alt="" className={styles.FirstImg} />
+      <img src={pj2} alt="" className={styles.SecondImg} />
       </div>
     </div>
   );
