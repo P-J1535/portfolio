@@ -122,7 +122,7 @@ const MyResume = () => {
     };
 
     return (
-        <div className={styles.resumeContainer} id="resume">
+        <div className={styles.resumeContainer} id="about">
             <p className={styles.underline}></p>
             <div className={styles.data}>
                 <p>2+ YEARS OF EXPERIENCE</p>
