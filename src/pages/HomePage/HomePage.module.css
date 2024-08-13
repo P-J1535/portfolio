@@ -16,6 +16,7 @@
     background-color: rgb(11, 17, 32);
     color: #ffff;
     flex-direction: row;
+    padding: 10% 0 0 0;
   }
 
   .contentContainer {
