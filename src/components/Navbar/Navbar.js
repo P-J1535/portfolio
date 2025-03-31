@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import styles from './Navbar.module.css';
-import logo from '../../assets/images/logo.png'
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import styles from "./Navbar.module.css";
+import logo from "../../assets/images/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   const handleLinkClick = (index, item) => {
-    if (item === 'Resume') {
+    if (item === "Resume") {
       handleDownload();
     } else {
       setActiveIndex(index);
@@ -22,34 +22,35 @@ const Navbar = () => {
 
   const handleDownload = () => {
     const resumeUrl = "/Resume/PrathameshJepal.pdf";
-    window.open(resumeUrl, '_blank');
+    window.open(resumeUrl, "_blank");
   };
 
   const handleHomePage = () => {
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarLogo}>
-      
-      <img src={logo} alt="logo" onClick={handleHomePage} />
+        <img src={logo} alt="logo" onClick={handleHomePage} />
       </div>
-      <ul className={`${styles.navbarMenu} ${isOpen ? styles.active : ''}`}>
-        {['Home', 'Projects', 'About', 'Resume', 'Contact'].map((item, index) => (
-          <li key={index}>
-            <a
-              href={item !== 'Resume' ? `#${item.toLowerCase()}` : '#'}
-              className={activeIndex === index ? styles.active : ''}
-              onClick={() => handleLinkClick(index, item)}
-            >
-              {item}
-            </a>
-          </li>
-        ))}
+      <ul className={`${styles.navbarMenu} ${isOpen ? styles.active : ""}`}>
+        {["Home", "Projects", "About", "Resume", "Contact"].map(
+          (item, index) => (
+            <li key={index}>
+              <a
+                href={item !== "Resume" ? `#${item.toLowerCase()}` : "#"}
+                className={activeIndex === index ? styles.active : ""}
+                onClick={() => handleLinkClick(index, item)}
+              >
+                {item}
+              </a>
+            </li>
+          )
+        )}
       </ul>
       <div className={styles.navbarToggle} onClick={toggleMenu}>
-        <div className={`${styles.hamburger} ${isOpen ? styles.active : ''}`}>
+        <div className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}>
           <span></span>
           <span></span>
           <span></span>

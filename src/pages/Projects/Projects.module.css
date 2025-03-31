@@ -7,7 +7,7 @@
 }
 
 .projects > h1 {
-  color: #C10644;
+  color: #c10644;
   font-size: 0.8rem;
   font-weight: 200;
   text-align: center;
@@ -20,7 +20,9 @@
   font-size: 2.5em;
   margin-bottom: 40px;
 }
-
+.para {
+  color: #000000;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
