@@ -35,16 +35,22 @@ const HomePage = () => {
               <a
                 href="https://www.facebook.com/prathamesh.jepal.1"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 <FontAwesomeIcon icon={faFacebookF} className={styles.icon} />
               </a>
-              <a href="https://github.com/P-J1535" target="_blank">
+              <a
+                href="https://github.com/P-J1535"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faGithub} className={styles.icon} />
               </a>
               <a
                 href="https://www.linkedin.com/in/prathamesh-jepal-014184230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
@@ -52,6 +58,7 @@ const HomePage = () => {
               <a
                 href="https://www.instagram.com/pj_1535?igsh=MWNvNnI2emc2ZmEwNA%3D%3D&utm_source=qr"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 <FontAwesomeIcon icon={faInstagram} className={styles.icon} />

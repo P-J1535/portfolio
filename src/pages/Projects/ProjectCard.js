@@ -11,10 +11,20 @@ const ProjectCard = ({ title, description, image, gitLink, domainLink }) => {
         <div className={styles.titleWrap}>
           <h3 className={styles.title}>{title}</h3>
           <div className={styles.icons}>
-            <a href={gitLink} target="_blank" className={styles.icon}>
+            <a
+              href={gitLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.icon}
+            >
               <GitHubIcon className={styles.iconInside} />
             </a>
-            <a href={domainLink} target="_blank" className={styles.icon}>
+            <a
+              href={domainLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.icon}
+            >
               <LanguageIcon className={styles.iconInside} />
             </a>
           </div>
